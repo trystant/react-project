@@ -1,0 +1,27 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "Test React Project",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/trystant/react-project.git"
+  },
+  "author": "Mark Nyon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trystant/react-project/issues"
+  },
+  "homepage": "https://github.com/trystant/react-project#readme",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.16.0",
+    "webpack": "^1.13.2"
+  }
+}
