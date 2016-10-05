@@ -4,11 +4,17 @@
   "description": "Test React Project",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mkdir": "mkdir -p build",
+    "build": "npm run clean && npm run mkdir && npm run build:html",
+    "clean": "rm -rf build",
+    "watch": "npm run watch:html",
+    "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
+    "build:html": "npm run clean:html && cp index.html build/",
+    "clean:html": "rm -f build/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/trystant/react-project.git"
+    "url": "git://git@github.com/trystant/react-project.git"
   },
   "author": "Mark Nyon",
   "license": "MIT",
@@ -22,6 +28,7 @@
   },
   "devDependencies": {
     "babel-preset-react": "^6.16.0",
+    "chokidar-cli": "^1.2.0",
     "webpack": "^1.13.2"
   }
 }
